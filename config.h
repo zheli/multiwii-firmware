@@ -36,7 +36,7 @@
     //#define BI
     //#define TRI
     //#define QUADP
-    //#define QUADX
+    #define QUADX
     //#define Y4
     //#define Y6
     //#define HEX6
@@ -139,7 +139,7 @@
       //#define Bobs_9DOF_V1     // BobsQuads 9DOF V1 with ITG3200, BMA180 & HMC5883L
       //#define Bobs_10DOF_BMP_V1 // BobsQuads 10DOF V1 with ITG3200, BMA180, HMC5883L & BMP180 - BMP180 is software compatible with BMP085
       //#define FLYDUINO_MPU       // MPU6050 Break Out onboard 3.3V reg
-      //#define CRIUS_AIO_PRO_V1
+      #define CRIUS_AIO_PRO_V1
       //#define DESQUARED6DOFV2GO  // DEsquared V2 with ITG3200 only
       //#define DESQUARED6DOFV4    // DEsquared V4 with MPU6050
       //#define LADYBIRD
@@ -638,11 +638,11 @@
        in NMEA mode the GPS must be configured to output GGA and RMC NMEA sentences (which is generally the default conf for most GPS devices)
        at least 5Hz update rate. uncomment the first line to select the GPS serial port of the arduino */
        
-    //#define GPS_SERIAL 2         // should be 2 for flyduino v2. It's the serial port number on arduino MEGA
+    #define GPS_SERIAL 2         // should be 2 for flyduino v2. It's the serial port number on arduino MEGA
     //#define GPS_PROMINI_SERIAL   // Will Autosense if GPS is connected when ardu boots.
 
     // avoid using 115200 baud because with 16MHz arduino the 115200 baudrate have more than 2% speed error (57600 have 0.8% error)
-    #define GPS_BAUD   57600
+    #define GPS_BAUD   115200
 
    /* GPS protocol 
        NMEA  - Standard NMEA protocol GGA, GSA and RMC  sentences are needed
@@ -652,7 +652,7 @@
 
     
     //#define NMEA
-    //#define UBLOX
+    #define UBLOX
     //#define MTK_BINARY16
     //#define MTK_BINARY19
     //#define INIT_MTK_GPS        // initialize MTK GPS for using selected speed, 5Hz update rate and GGA & RMC sentence or binary settings
